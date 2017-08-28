@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bobaApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BobaDash</title>
+
+  <!-- Google Font - Open Sans -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+  <!-- Bootstrap CDN 3.3.7  -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Added by jay to make boostrap drop down work and social media icons -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/simplecartjs/3.0.5/simplecart.min.js"></script>
+  <script src="/simpleCart.js"></script>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Angular CDN 1.5.7 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+
+  <!-- Angular UI Router CDN 0.4.2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Nav -->
+  <div class="navbar-wrapper">
+    <div class="container">
+
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+              aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand" href="#">BobaDASH!</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a ui-sref="home">Home</a></li>
+              <li><a ui-sref="menu">Menu</a></li>
+              <li><a ui-sref="customer">Customer</a></li>
+              <li><a ui-sref="server">Server</a></li>
+              <li><a ui-sref="about">About</a></li>
+              <!-- Added by Jay for error page viewing only -->
+              <li><a ui-sref="rejectPage">Error</a></li>
+              <!-- Added by Jay for error page viewing only -->
+              <!-- <li><a ui-sref="account">New Account</a></li>  -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Create Account
+        <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#/account">Customer Form</a></li>
+                  <li><a href="#/accountEmp">Employee Form</a></li>
+                </ul>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div ui-view></div>
+
+  <!-- Footer -->
+
+  <!-- Module -->
+  <script type="text/javascript" src="./app.js"></script>
+
+
+
+  <!-- Services -->
+  <script type="text/javascript" src="./services/homeService.js"></script>
+  <script type="text/javascript" src="./services/menuService.js"></script>
+  <script type="text/javascript" src="./services/customerService.js"></script>
+  <script type="text/javascript" src="./services/serverService.js"></script>
+  <script type="text/javascript" src="./services/aboutService.js"></script>
+  <script type="text/javascript" src="./services/cartService.js"></script>
+  <!-- Added by Jay for order error page -->
+  <script type="text/javascript" src="./services/rejectPageService.js"></script>
+  <script type="text/javascript" src="./services/accountService.js"></script>
+  <script type="text/javascript" src="./services/accountEmpService.js"></script>
+
+  <!-- Controllers -->
+  <script type="text/javascript" src="./controllers/homeController.js"></script>
+  <script type="text/javascript" src="./controllers/menuController.js"></script>
+  <script type="text/javascript" src="./controllers/customerController.js"></script>
+  <script type="text/javascript" src="./controllers/serverController.js"></script>
+  <script type="text/javascript" src="./controllers/aboutController.js"></script>
+  <script type="text/javascript" src="./controllers/cartController.js"></script>
+  <!-- Added by Jay for order error page -->
+  <script type="text/javascript" src="./controllers/rejectPageController.js"></script>
+  <script type="text/javascript" src="./controllers/accountController.js"></script>
+  <script type="text/javascript" src="./controllers/accountEmpController.js"></script>
+
+
+
+</body>
+
+</html>

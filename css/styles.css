@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Nav*/
+
+/*Footer*/
+
+/* Added by jay for about page footer */
+.about_footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+/*Menu*/
+
+/*Server*/
+
+/*Customer*/
+
+/*Cart*/
+
+/*About*/
+
+/*Account*/
+/* Added by jay for new account page */
+#profileHeader{
+border-bottom: 1px solid black;
+}
